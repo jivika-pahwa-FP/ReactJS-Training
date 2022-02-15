@@ -29,7 +29,3 @@ emp_Detail.getAge();
 emp_Detail.getDesignation();
 emp_Detail.getSalary();
 
-// console.log(emp_Detail.name); // undefined as it is not defined under returning object.
-// console.log(emp_Detail.age); // undefined as it is not defined under returning object.
-// console.log(emp_Detail.designation); // undefined as it is not defined under returning object.
-// console.log(emp_Detail.salary); // undefined as it is not defined under returning object.
