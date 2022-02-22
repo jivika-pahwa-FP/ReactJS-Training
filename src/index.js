@@ -3,7 +3,7 @@ import React  from 'react';
 import './App.css';
 import Data from './Data/EmployeeData.js';
 import DataBindingClassComponent from './ClassComponent/DataBindingClassComponent';
-import FiterDataComponent from './ClassComponent/FilterDataComponent';
+import FiterDataComponent from './component/FilterDataComponent';
 
 ReactDom.render(
   <div>

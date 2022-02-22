@@ -18,7 +18,7 @@ export default function FiterDataComponent(props){
         {/* <p>Searched Input : {searchedInput} </p> */}
         {props.data.map((ele)=>{
             if(searchedInput){
-                if(ele.EmployeeName.toLowerCase() == searchedInput || (ele.EmployeeDesignation).toLowerCase() == searchedInput)
+                if(ele.EmployeeName.toLowerCase() === searchedInput || (ele.EmployeeDesignation).toLowerCase() === searchedInput)
                 return <EmployeeDataComponent {...ele}></EmployeeDataComponent>;
             }
             else{
