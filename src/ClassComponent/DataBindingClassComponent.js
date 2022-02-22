@@ -1,5 +1,5 @@
 import { Component } from "react";
-import ChildComponent from "./childComponent";
+import ChildComponent from "./ChildComponent";
 
 export default class DataBindingClassComponent extends Component{
     constructor(){
