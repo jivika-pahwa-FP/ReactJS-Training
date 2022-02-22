@@ -1,3 +1,14 @@
+body{
+  text-align: center;
+  background-color: darkslategray;
+  color:white;
+}
+
+.container{
+  text-align: center;
+  background-color: darkslategray;
+  color:black;
+}
 .App {
   text-align: center;
 }

@@ -1,17 +1,42 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDom from 'react-dom';
+import React  from 'react';
+import './App.css';
+import Data from './Data/EmployeeData.js';
+import DataBindingClassComponent from './ClassComponent/DataBindingClassComponent';
+import FiterDataComponent from './ClassComponent/FilterDataComponent';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+ReactDom.render(
+  <div>
+    {/* <DataBindingClassComponent></DataBindingClassComponent> */}
+    <FiterDataComponent data = {Data}></FiterDataComponent>
+  </div>,
+  document.getElementById("root")
+)
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+
+
+
+// using simple JavaScript
+
+// function HeaderComponent(){
+//     return React.createElement("div",{},[
+//       React.createElement("h1",{},"This is the header for the session"),
+//       React.createElement("h2",{},"This is other header"),
+//       React.createElement("p",{},"This is sample Paragraph"),
+//       React.createElement("div",{},[
+//         React.createElement("section",{},[
+//          React.createElement("h1",{},"This is React Component"),
+//          React.createElement("div",{},[
+//           React.createElement("h2",{},"This is Another Component")
+//          ]),
+//       ]),
+//       React.createElement("article",{},[
+//         React.createElement("h1",{},"This is React Component"),
+//         React.createElement("div",{},[
+//           React.createElement("h2",{},"This is Another Component")
+//         ])
+//       ]),
+//     ]),
+//   ])
+// }
