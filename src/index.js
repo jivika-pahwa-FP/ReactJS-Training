@@ -7,7 +7,7 @@ import FiterDataComponent from './ClassComponent/FilterDataComponent';
 
 ReactDom.render(
   <div>
-    {/* <DataBindingClassComponent></DataBindingClassComponent> */}
+    <DataBindingClassComponent></DataBindingClassComponent>
     <FiterDataComponent data = {Data}></FiterDataComponent>
   </div>,
   document.getElementById("root")
