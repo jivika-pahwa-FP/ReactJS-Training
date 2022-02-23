@@ -1,9 +1,10 @@
 body{
   text-align: center;
   background-color: darkslategray;
+}
+h3{
   color:white;
 }
-
 .container{
   text-align: center;
   background-color: darkslategray;

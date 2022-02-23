@@ -4,11 +4,15 @@ import './App.css';
 import Data from './Data/EmployeeData.js';
 import DataBindingClassComponent from './ClassComponent/DataBindingClassComponent';
 import FiterDataComponent from './component/FilterDataComponent';
+import DataFetchComponent from './ClassComponent/DataFetchComponent';
+import NLCDataFetch from './ClassComponent/NLCDataFetch';
 
 ReactDom.render(
   <div>
-    <DataBindingClassComponent></DataBindingClassComponent>
-    <FiterDataComponent data = {Data}></FiterDataComponent>
+    <NLCDataFetch></NLCDataFetch>
+    {/* <DataBindingClassComponent></DataBindingClassComponent>
+    <FiterDataComponent data = {Data}></FiterDataComponent> */}
+    {/* <DataFetchComponent></DataFetchComponent> */}
   </div>,
   document.getElementById("root")
 )
