@@ -5,14 +5,12 @@ import Data from './Data/EmployeeData.js';
 import DataBindingClassComponent from './ClassComponent/DataBindingClassComponent';
 import FiterDataComponent from './component/FilterDataComponent';
 import DataFetchComponent from './ClassComponent/DataFetchComponent';
-import NLCDataFetch from './ClassComponent/NLCDataFetch';
+import NLCDataFetch from './ClassComponent/NLCDataFetch'; 
+import FormComponent from './ClassComponent/FormComponent';
 
 ReactDom.render(
   <div>
-    <NLCDataFetch></NLCDataFetch>
-    {/* <DataBindingClassComponent></DataBindingClassComponent>
-    <FiterDataComponent data = {Data}></FiterDataComponent> */}
-    {/* <DataFetchComponent></DataFetchComponent> */}
+    <FormComponent></FormComponent>
   </div>,
   document.getElementById("root")
 )
