@@ -1,30 +1,27 @@
 import ReactDom from 'react-dom';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React  from 'react';
 import './App.css';
-import UserStateComponent from './component/userStateComponent';
-import DataFetchUsingHook from './component/DataFetchUsingHook';
-import GrandGrandParentComponent from './component/ContextApiComponent';
-import CrudComponent from './component/CrudComponent';
-import UpdateStudentData from './component/UpdateStudentData';
-import PostStudentData from './component/PostStudentData';
+import Data from './Data/EmployeeData.js';
+import DataBindingClassComponent from './ClassComponent/DataBindingClassComponent';
+import FiterDataComponent from './component/FilterDataComponent';
+import DataFetchComponent from './ClassComponent/DataFetchComponent';
+import NLCDataFetch from './ClassComponent/NLCDataFetch'; 
+import FormComponent from './ClassComponent/FormComponent';
 
-
-
-export default function App(){
-  return(
-    <BrowserRouter>
-    <Routes>
-      <Route exact path='/' element = {<CrudComponent/>} ></Route>
-      <Route exact path='/Update/:StudentID' element = {<UpdateStudentData/>} ></Route>
-      <Route exact path='/PostStudentData' element={<PostStudentData/>}></Route>
-    </Routes>
-    </BrowserRouter>  
-  )
-}
-
-
-ReactDom.render(<App></App>,document.getElementById("root"))
+var stockApiList = [
+  "https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/SBI",
+  "https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/NLC"
+]
+ReactDom.render(
+  <div>
+    {stockApiList.map((stock)=>{
+      return <NLCDataFetch stockApi = {stock} ></NLCDataFetch>
+    })}
+    
+    {/* <FormComponent></FormComponent> */}
+  </div>,
+  document.getElementById("root")
+)
 
 
 

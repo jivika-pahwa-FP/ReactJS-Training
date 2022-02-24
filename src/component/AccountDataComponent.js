@@ -11,7 +11,7 @@ export default function AccountDataComponent(props){
         </div>
         <div className="card-footer">
          <h4>EmpID : {props.id} </h4>
-        <h4>EmpDesignation : {props.percentage} </h4></div>
+        <h4>EmpGrade : {props.percentage} </h4></div>
         </div>
         <br />
         <button className = "btn btn-danger" id={props.id} onClick={props.deleteBtn}>Delete</button>

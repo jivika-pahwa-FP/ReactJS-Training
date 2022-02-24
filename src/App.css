@@ -1,16 +1,17 @@
 body{
   text-align: center;
-  background-color: darkslategray;
+  background-color:lightseagreen ;
+  color: white;
   
 }
 h3{
-  color:white;
+  color:crimson;
 }
-.container{
-  text-align: center;
-  background-color: darkslategray;
+ .container{
+  /* text-align: center; */
+  /* background-color: whitesmoke; */
   color:black;
-}
+} 
 .App {
   text-align: center;
 }
