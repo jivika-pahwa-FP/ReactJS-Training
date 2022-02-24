@@ -28,6 +28,7 @@ export default class FormComponent extends Component {
             name: this.state.name,
             percentage: this.state.percentage,
         };
+        console.log(Studentdata);
         axios
             .post("https://localhost:5001/api/Student/AddData", Studentdata)
             .then(res => console.log(res.data))

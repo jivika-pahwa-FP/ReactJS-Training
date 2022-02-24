@@ -8,9 +8,17 @@ import DataFetchComponent from './ClassComponent/DataFetchComponent';
 import NLCDataFetch from './ClassComponent/NLCDataFetch'; 
 import FormComponent from './ClassComponent/FormComponent';
 
+var stockApiList = [
+  "https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/SBI",
+  "https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/NLC"
+]
 ReactDom.render(
   <div>
-    <FormComponent></FormComponent>
+    {stockApiList.map((stock)=>{
+      return <NLCDataFetch stockApi = {stock} ></NLCDataFetch>
+    })}
+    
+    {/* <FormComponent></FormComponent> */}
   </div>,
   document.getElementById("root")
 )

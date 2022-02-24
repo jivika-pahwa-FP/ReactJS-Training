@@ -12,9 +12,9 @@ export default class NLCDataFetch extends Component {
     render() {
         return (
             <>
-                <h3>NLC Power Limited</h3>
+                <h3>{this.state.NLC_Data.company} Power Limited</h3>
                 <br />
-                <div className="card text-center" style={{ width: '350px', margin: '20px', display: 'inline-block' }}>
+                <div className="card" style={{ width: '350px', margin: '5px', display: 'inline-block' }}>
                     <div className="card-header">
                         {this.state.NLC_Data.DISPID} {this.state.NLC_Data.SC_SUBSEC}
                     </div>
@@ -46,12 +46,15 @@ export default class NLCDataFetch extends Component {
     }
 
     componentDidMount() {
-        Axios.get("https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/NLC").then((response) => {
-            // console.log(response.data);
-            // console.log(response.data.data.HN);
-            this.setState({ NLC_Data: response.data.data })
-            console.log(this.state.NLC_Data)
-        });
+        setInterval(() => {
+
+            Axios.get(this.props.stockApi).then((response) => {
+                // console.log(response.data);
+                // console.log(response.data.data.HN);
+                this.setState({ NLC_Data: response.data.data })
+                // console.log(this.state.NLC_Data)
+            })
+        }, 1000);
     }
 
 }
