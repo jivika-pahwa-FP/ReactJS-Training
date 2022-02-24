@@ -1,0 +1,11 @@
+1. Create HTML HTML File
+2. Include "js" file file
+3. Create 2 Element (div), add some text to those div, add border, color by default : black
+4. When you bring your mouse inside that div, color of text in div should update to red
+When you move your mouse outside, color should change to black
+
+** Use JavaScript...
+
+- DOm Manulation
+- What is DOM
+- Events in JavaScript
