@@ -15,6 +15,21 @@ export default function UpdateStudentData(props) {
     var [getStudentName, setStudentName] = useState('');
     var [getStudentPercentage, setStudentPercentage] = useState('');
 
+    
+    var getDatabyID = () => {
+        Axios.get(`https://localhost:5001/api/Student/Edit/${params.StudentID}`)
+        .then((response)=>{
+            console.log(response.data)
+            setStudentID(getStudentID = response.data.id);
+            setStudentName(getStudentName = response.data.name);
+            setStudentPercentage(getStudentPercentage = response.data.percentage);
+        });
+    }
+
+    useEffect(()=>{
+        getDatabyID();
+    },[]);
+
     var OnNameChange = (event) => {
         setStudentName(event.target.value);
     };
@@ -27,7 +42,7 @@ export default function UpdateStudentData(props) {
         event.preventDefault();
 
         var studentData = {
-            id: params.StudentID,
+            id: getStudentID,
             name: getStudentName,
             percentage: getStudentPercentage
         };
@@ -56,7 +71,7 @@ export default function UpdateStudentData(props) {
                     <center>
                         <div className="form-group">
                             <div className="col-sm-4">
-                                <input type="text" className="form-control" placeholder="Enter Student ID" value={params.StudentID} required readOnly/>
+                                <input type="text" className="form-control" placeholder="Enter Student ID" value={getStudentID} required readOnly/>
                             </div>
                         </div>
 

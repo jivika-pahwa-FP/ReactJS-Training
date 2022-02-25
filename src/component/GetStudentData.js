@@ -8,7 +8,7 @@ export default function GetStudentData() {
 
     useEffect(()=>{
         getData();
-    });
+    },[]);
 
     var getData = () => {
         Axios.get("https://localhost:5001/api/Student/getAllData")
@@ -54,7 +54,8 @@ export default function GetStudentData() {
                             <td>{student.name}</td>
                             <td>{student.percentage}</td>
                             <td>
-                            <Link to = {`/Update/:${student.id}`} ><button className="btn btn-warning" onClick="">Update</button>
+                            <Link to = {`/Update/${student.id}`} >
+                                <button className="btn btn-warning">Update</button>
                             </Link>
                             </td>
                             <td>

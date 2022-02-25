@@ -2,9 +2,6 @@ import ReactDom from 'react-dom';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React  from 'react';
 import './App.css';
-import UserStateComponent from './component/userStateComponent';
-import DataFetchUsingHook from './component/DataFetchUsingHook';
-import GrandGrandParentComponent from './component/ContextApiComponent';
 import CrudComponent from './component/CrudComponent';
 import UpdateStudentData from './component/UpdateStudentData';
 import PostStudentData from './component/PostStudentData';
@@ -24,32 +21,16 @@ export default function App(){
 }
 
 
-ReactDom.render(<App></App>,document.getElementById("root"))
+ReactDom.render(<App></App>,document.getElementById("root"));
 
 
 
 
+// import ReactDom from 'react-dom';
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import React  from 'react';
+// // import './App.css';
+// import FirstSPAComponent from './SinglePageApplication/FirstSPAComponent';
 
-// using simple JavaScript
 
-// function HeaderComponent(){
-//     return React.createElement("div",{},[
-//       React.createElement("h1",{},"This is the header for the session"),
-//       React.createElement("h2",{},"This is other header"),
-//       React.createElement("p",{},"This is sample Paragraph"),
-//       React.createElement("div",{},[
-//         React.createElement("section",{},[
-//          React.createElement("h1",{},"This is React Component"),
-//          React.createElement("div",{},[
-//           React.createElement("h2",{},"This is Another Component")
-//          ]),
-//       ]),
-//       React.createElement("article",{},[
-//         React.createElement("h1",{},"This is React Component"),
-//         React.createElement("div",{},[
-//           React.createElement("h2",{},"This is Another Component")
-//         ])
-//       ]),
-//     ]),
-//   ])
-// }
+// ReactDom.render(<FirstSPAComponent></FirstSPAComponent>,document.getElementById("root"))
