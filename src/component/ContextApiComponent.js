@@ -1,13 +1,15 @@
 import React, { useState , useEffect, useContext } from 'react';
-var AppContext = React.createContext;
+var AppContext = React.createContext();
 
 
    export default  function GrandGrandParentComponent(){
        var [nativeVillage] = useState("Delhi");
         return(
             <>
+            <AppContext.Provider value={nativeVillage}>
                 <h3> This is Grand Grand Parent Component {nativeVillage}</h3>
-                 <GrandParentComponent village={nativeVillage}></GrandParentComponent>
+                 <GrandParentComponent></GrandParentComponent>
+            </AppContext.Provider>
             </>
         )
     }

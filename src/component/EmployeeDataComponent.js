@@ -4,7 +4,7 @@ export default function EmployeeDataComponent(props){
         <div className="container" style={{width:'350px' ,margin:'50px',display:'inline-block'}}>
         <div className="card">
         <div className="card-header">
-            {console.log(props.EmployeeName)}
+            {/* {console.log(props.EmployeeName)} */}
         <h3>{props.EmployeeName} </h3>
         </div>
         <div className="card-body">
