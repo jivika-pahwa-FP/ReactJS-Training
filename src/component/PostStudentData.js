@@ -1,17 +1,29 @@
 
 import Axios from 'axios';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, matchRoutes } from 'react-router-dom';
 
 export default function PostStudentData() {
-
+    let maxID;
     var [getStudentID, setStudentID] = useState('');
     var [getStudentName, setStudentName] = useState('');
     var [getStudentPercentage, setStudentPercentage] = useState('');
 
-    var OnIDChange = (event) => {
-        setStudentID(event.target.value);
-    };
+    useEffect(()=>{
+        Axios.get("https://localhost:5001/api/Student/getAllData")
+        .then((response)=>{
+        //    console.log(response.data[0].id);
+           let API_Data = response.data;
+           API_Data.forEach((data)=>{
+            maxID = Math.max(data.id);
+             setStudentID(maxID += 1);
+           })
+            console.log(maxID);
+            console.log("id  : "+getStudentID);
+
+        })
+    },[]);
+
     var OnNameChange = (event) => {
         setStudentName(event.target.value);
     };
@@ -51,7 +63,7 @@ export default function PostStudentData() {
                     <center>
                         <div className="form-group">
                             <div className="col-sm-4">
-                                <input type="number" className="form-control" placeholder="Enter Student ID" value={getStudentID} onChange={OnIDChange} required />
+                                <input type="number" className="form-control" placeholder="Enter Student ID" value={getStudentID} required  readonly />
                             </div>
                         </div>
 

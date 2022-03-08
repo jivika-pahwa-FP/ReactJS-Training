@@ -1,31 +1,31 @@
-// import ReactDom from 'react-dom';
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import React  from 'react';
-// import './App.css';
-// import CrudComponent from './component/CrudComponent';
-// import UpdateStudentData from './component/UpdateStudentData';
-// import PostStudentData from './component/PostStudentData';
+import ReactDom from 'react-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React  from 'react';
+import './App.css';
+import CrudComponent from './component/CrudComponent';
+import UpdateStudentData from './component/UpdateStudentData';
+import PostStudentData from './component/PostStudentData';
 
 
 
-// export default function App(){
-//   return(
-//     <BrowserRouter>
-//     <Routes>
-//       <Route exact path='/' element = {<CrudComponent/>} ></Route>
-//       <Route exact path='/Update/:StudentID' element = {<UpdateStudentData/>} ></Route>
-//       <Route exact path='/PostStudentData' element={<PostStudentData/>}></Route>
-//     </Routes>
-//     </BrowserRouter>  
-//   )
-// }
+export default function App(){
+  return(
+    <BrowserRouter>
+    <Routes>
+      <Route exact path='/' element = {<CrudComponent/>} ></Route>
+      <Route exact path='/Update/:StudentID' element = {<UpdateStudentData/>} ></Route>
+      <Route exact path='/PostStudentData' element={<PostStudentData/>}></Route>
+    </Routes>
+    </BrowserRouter>  
+  )
+}
 
 
-// ReactDom.render(<App></App>,document.getElementById("root"));
+ReactDom.render(<App></App>,document.getElementById("root"));
 
 
 
-
+/*
 import ReactDom from 'react-dom';
 import React  from 'react';
 import './App.css';
@@ -43,6 +43,7 @@ ReactDom.render(
 
 <>
 <FilterDataComponent data = {Data}></FilterDataComponent>
+*/
 
 {/* <NewComponent></NewComponent>
 <SecondComponent></SecondComponent> */}
@@ -52,5 +53,5 @@ ReactDom.render(
 {/* <ObjectDataComponent></ObjectDataComponent> */}
 {/* <GrandGrandParentComponent></GrandGrandParentComponent> */}
 
-</>,
-document.getElementById("root")); 
+// </>,
+// document.getElementById("root")); 

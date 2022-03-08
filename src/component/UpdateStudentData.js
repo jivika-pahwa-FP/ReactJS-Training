@@ -1,6 +1,6 @@
 import Axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Link,useLocation,useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 
 export default function UpdateStudentData(props) {
@@ -9,26 +9,26 @@ export default function UpdateStudentData(props) {
     let params = useParams();
     // console.log(location);
     // console.log(location.pathname.search);
-    console.log("Params = "+params.StudentID);
+    console.log("Params = " + params.StudentID);
 
     var [getStudentID, setStudentID] = useState('');
     var [getStudentName, setStudentName] = useState('');
     var [getStudentPercentage, setStudentPercentage] = useState('');
 
-    
+
     var getDatabyID = () => {
         Axios.get(`https://localhost:5001/api/Student/Edit/${params.StudentID}`)
-        .then((response)=>{
-            console.log(response.data)
-            setStudentID(getStudentID = response.data.id);
-            setStudentName(getStudentName = response.data.name);
-            setStudentPercentage(getStudentPercentage = response.data.percentage);
-        });
+            .then((response) => {
+                console.log(response.data);
+                setStudentID(getStudentID = response.data.id);
+                setStudentName(getStudentName = response.data.name);
+                setStudentPercentage(getStudentPercentage = response.data.percentage);
+            });
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         getDatabyID();
-    },[]);
+    }, []); // calling API only once ([])
 
     var OnNameChange = (event) => {
         setStudentName(event.target.value);
@@ -57,6 +57,7 @@ export default function UpdateStudentData(props) {
         setStudentID("");
         setStudentName("");
         setStudentPercentage("");
+        window.location.href = "/";
 
     }
 
@@ -71,7 +72,7 @@ export default function UpdateStudentData(props) {
                     <center>
                         <div className="form-group">
                             <div className="col-sm-4">
-                                <input type="text" className="form-control" placeholder="Enter Student ID" value={getStudentID} required readOnly/>
+                                <input type="text" className="form-control" placeholder="Enter Student ID" value={getStudentID} required readOnly />
                             </div>
                         </div>
 
